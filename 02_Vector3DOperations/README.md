@@ -10,7 +10,7 @@
 
 5. угол между двумя векторами
 
-## Объяснения кода : 
+# Объяснения кода : 
 
 ### Vector3
 
@@ -38,6 +38,96 @@ public Vector3(double x, double y, double z)
 Vector3 v1 = new Vector3(1.0, 2.0, 3.0);
 ```
 
-Основные методы: 
+## Основные методы: 
 
-- Скалярное произведение
+### - Скалярное произведение
+
+```java
+public double dotProduct(Vector3 other)
+```
+
+Метод dotProduct вычисляет скалярное произведение текущего вектора и другого вектора other.
+
+Пример:
+
+```java
+double result = v1.dotProduct(v2);
+System.out.println("Скалярное произведение v1 и v2: " + result);
+```
+
+### - Векторное произведение
+
+```java
+public Vector3 crossProduct(Vector3 other)
+```
+
+Метод **crossProduct** вычисляет векторное произведение текущего вектора и другого вектора other, возвращая новый вектор с результатом.
+
+Пример:
+
+```java
+Vector3 result = v1.crossProduct(v2);
+System.out.println("Векторное произведение v1 и v2: (" + result.getX() + ", " + result.getY() + ", " + result.getZ() + ")");
+```
+
+### - Сложение векторов
+
+```java
+public Vector3 add(Vector3 other)
+```
+
+Метод **add** выполняет сложение текущего вектора с вектором other и возвращает новый вектор с результатом.
+
+Пример: 
+
+```java
+Vector3 result = v1.add(v2);
+System.out.println("Сложение v1 и v2: (" + result.getX() + ", " + result.getY() + ", " + result.getZ() + ")");
+```
+
+### - Вычитание векторов
+
+```java
+public Vector3 subtract(Vector3 other)
+```
+
+Метод **subtract** выполняет вычитание текущего вектора с вектором other и возвращает новый вектор с результатом.
+
+Пример:
+
+```java
+Vector3 result = v1.subtract(v2);
+System.out.println("Вычитание v1 и v2: (" + result.getX() + ", " + result.getY() + ", " + result.getZ() + ")");
+```
+
+### - Модуль вектора
+
+```java
+public double magnitude()
+```
+
+Метод **magnitude** возвращает длину (модуль) вектора, вычисляя её по формуле
+
+Пример: 
+
+```java
+System.out.println("Модуль вектора v1: " + v1.magnitude());
+```
+
+### - Угол между двумя векторами 
+
+```java
+public double angleBetween(Vector3 other)
+```
+
+Метод **angleBetween** вычисляет угол между текущим вектором и вектором other в радианах.
+
+Пример: 
+
+```java
+System.out.println("Угол между v1 и v2: " + v1.angleBetween(v2) + " радиан");
+```
+
+# Этот проект демонстрирует работу с векторами в 3D-пространстве и реализацию основных операций линейной алгебры. Класс Vector3 может использоваться как база для задач в физике, компьютерной графике и инженерии, где требуются математические операции с векторами.
+
+
